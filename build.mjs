@@ -2,7 +2,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { site, socials, lede, interests, quote, timelineNext, notes, timeline } from "./content.mjs";
+import { site, socials, lede, interests, closing, quote, timelineNext, notes, timeline } from "./content.mjs";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const css = readFileSync(join(ROOT, "style.css"), "utf8").trim();
@@ -81,11 +81,16 @@ ${interests
     (section) => `<section class="interest">
 <h2>${esc(section.title)}.</h2>
 <ul>
-${section.items.map((item) => `<li>${rich(item)}</li>`).join("\n")}
+${section.items.map((item) => typeof item === "string" ? `<li>${rich(item)}</li>` : `<li>${rich(item.text)}<ul class="sub">${item.sub.map((s) => `<li>${rich(s)}</li>`).join("")}</ul></li>`).join("\n")}
 </ul>
 </section>`
   )
   .join("\n")}
+
+<section class="interest closing-section">
+<h2>${esc(closing.title)}.</h2>
+<p>${rich(closing.text)}</p>
+</section>
 
 <h2 class="notes-heading">Writing</h2>
 <ul class="notes">

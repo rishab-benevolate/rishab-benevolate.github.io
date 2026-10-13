@@ -18,46 +18,62 @@ export const socials = [
   { label: "Instagram", href: "https://www.instagram.com/rishabkattimani/" },
 ];
 
-// Home page. One sentence, then interests. Use [text](url) for links.
+// Home page. Intro paragraph, then interests. Use [text](url) for links.
 export const lede =
-  "I often think about how technology can be used to further humanity, and bite off way more than i can chew to do it. Here are some of the things I'm working on.";
+  "I think technology is one of the greatest forms of leverage humanity has ever created, and I’ve spent most of my life trying to figure out what I can do with it. I have a bad habit of biting off significantly more than I can chew. So far, I think that’s been a good thing.";
 
-// Each interest is a label plus short bullets. Use [text](url) for links.
+// Each interest is a label plus bullets. A bullet can be a string or { text, sub: [...] } for nested bullets.
 export const interests = [
   {
     title: "Entrepreneurship",
     items: [
-      "Co-founder and CEO of [Benevolate](https://benevolate.com)",
-      "Started CertificatesVault in 2024, for creating and verifying digital certificates",
-      "Freshman at the McCombs School of Business, UT Austin",
+      {
+        text: "I cofounded [Benevolate](https://benevolate.com) and currently run it as CEO, building the operating system I wish nonprofits already had.",
+        sub: [
+          "200,000+ donors reached",
+          "~$800,000 in payments processed",
+          "1M+ automated emails sent",
+          "1,000+ hours spent building it, and probably an unhealthy number thinking about it",
+        ],
+      },
+      "I’ve always been attracted to problems where the obvious response is, “There has to be a better way to do this.”",
+      "I started CertificatesVault in 2024 to make creating and verifying digital certificates simpler.",
     ],
   },
   {
     title: "Philanthropy",
     items: [
-      "Board director and digital literacy director at Briidge the Gap, 2023–2024",
-      "Built and taught Coding Carnival, a six-week course in McKinney ISD",
-      "Taught coding at the McKinney Public Library",
+      "I served as a Board Director and Digital Literacy Director at Briidge the Gap from 2023–2024, which gave me my first real look at how technology can either help a mission or get in its way.",
+      "I built and taught Coding Carnival, a six-week coding course in McKinney ISD.",
+      "I taught coding at the McKinney Public Library because I think learning to build technology changes the way you look at what’s possible.",
     ],
   },
   {
-    title: "AI",
+    title: "Artificial Intelligence",
     items: [
-      "Started in 2021, before generative AI, with decision trees and random forests",
-      "Then computer vision: face recognition, object detection, image captioning",
-      "Spoke on AI at PyCon India",
-      "Now experimenting with generative AI, including inside Benevolate",
+      "I started working with AI in 2021, before generative AI took over the conversation, building projects with decision trees and random forests.",
+      "I moved into computer vision, building face recognition, object detection, and image captioning projects.",
+      "I eventually got the opportunity to speak about AI at PyCon India.",
+      "Now I’m experimenting heavily with generative AI, including building it directly into Benevolate and figuring out where it can actually be useful rather than just slapped onto a product.",
     ],
   },
   {
     title: "Technology",
     items: [
-      "Coding for about eight years. [YouTube](https://www.youtube.com/channel/UC6OrQk8WsnCOR1OezlUU9zQ), past 11,000 subscribers. Code on [GitHub](https://github.com/RishabKattimani)",
-      "LEGO tank at Scratch Day at MIT. First place in a district robotics competition",
-      "Talks at [TEDxYouth@ArchesPoint](https://www.ted.com/talks/rishab_kattimani_a_blank_slated_past_to_a_goal_oriented_future), Geekle, BelPy, and PyCon India",
+      "I’ve been coding for roughly eight years, which means a weirdly large percentage of my childhood was spent staring at an IDE because I wanted to be an inventor.",
+      "I’ve built 90+ projects along the way, from things that became actual companies to things I built simply because I wanted to know if I could.",
+      "I grew my [YouTube channel](https://www.youtube.com/channel/UC6OrQk8WsnCOR1OezlUU9zQ) past 11,000 subscribers teaching people about coding and the things I was building. It taught me pretty early that building something is only half the job. You also have to understand it well enough to explain why anyone else should care.",
+      "I built a LEGO tank that I brought to Scratch Day at MIT and won first place in a district robotics competition.",
+      "I’ve spoken at [TEDxYouth@ArchesPoint](https://www.ted.com/talks/rishab_kattimani_a_blank_slated_past_to_a_goal_oriented_future), Geekle, BelPy, and PyCon India. I care less about having been on the stages than making sure I eventually have something worth saying on them.",
     ],
   },
 ];
+
+// Closing section on the home page.
+export const closing = {
+  title: "What ties all of this together",
+  text: "I’m 18, so I’m under no illusion that I have everything figured out. I probably understand a microscopic percentage of what there is to understand about business, technology, people, or the world. But one thing I’ve become increasingly convinced of is that most people dramatically underestimate what they can actually build. We inherit systems, institutions, companies, and ways of doing things and subconsciously assume somebody smarter than us designed them that way for a reason. Then you look closely and realize that half of them are held together with duct tape. I want to spend my life looking closely, finding things that are unnecessarily complicated, inefficient, inaccessible, or simply wrong, understanding why they became that way, and seeing whether I can build something better. I have no idea how much of that I’ll actually accomplish. My current strategy is essentially to aim irresponsibly high, build constantly, change my mind when the evidence says I’m wrong, and see how far that gets me.",
+};
 
 // One testimonial, shown on the timeline page. Wording preserved; […] marks an omission.
 export const quote = {
